@@ -1,0 +1,65 @@
+:root {
+    --button_blue: rgb(27, 183, 235);
+    ;
+}
+
+
+html {
+
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    margin: 0;
+    padding: 0;
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5rem;
+
+}
+
+h2 {
+    width: 25%;
+}
+
+#employee-form {
+    display: flex;
+    display: inline;
+    width: auto;
+
+
+}
+
+#employee-form label {
+    display: inline-block;
+    width: 100px;
+    margin-left: 0px;
+    text-align: left;
+    font-weight: bold;
+
+
+}
+
+#employee-form input {
+
+    display: inline;
+    margin-bottom: 1rem;
+    border-color: var(--button_blue);
+    height: 30px;
+    width: 250px;
+}
+
+#employee-form button {
+
+    background-color: var(--button_blue);
+    color: whitesmoke;
+    font-weight: bold;
+    padding: 5px 30px;
+    margin-left: 170px;
+
+}
