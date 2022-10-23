@@ -9,41 +9,45 @@
 
 <body>
 
+
     <h1>The Employee Management Application</h1>
     <h3>Add Employee</h3>
 
-<form id="employee-form">
-    <div class="input-row">
-    <label>Name:</label>
-    <input type="text" id="name_input" class="form-control" />
-    </div>
-    <div class="input-row">
-        <label>Title:</label>
-        <input type="text" id="title_input" class="form-control" />
-        
-    </div>
-    <div class="input-row">
-                <label>Extension</label>
-                <input type="text" id="extension_input" class="form-control" />
-    
-    </div>
-    <button id="add_row">Add</button>
-</form>
+    <form id="employee-form" onsubmit="return validateForm()">
+        <div class="input-row">
+            <label>Name:</label>
+            <input type="text" name="name" id="name_input" class="form-control" /><span class="error"
+                id="errorname"></span>
+        </div>
+        <div class="input-row">
+            <label>Title:</label>
+            <input type="text" name="title" id="title_input" class="form-control" /><span class="error"
+                id="errortitle"></span>
+
+        </div>
+        <div class="input-row">
+            <label>Extension</label>
+            <input type="text" name="extension" id="extension_input" class="form-control" /><span class="error"
+                id="errorextension"></span>
+
+        </div>
+        <button id="add_row">Add</button>
+    </form>
     <h2 id="registration_header" style="color:red">&nbsp;</h2>
     <d id="registration_info"></d>
-    <h3 id="employee_header" >&nbsp;Showing <span id="rowsCount"></span> Employees</h3>
+    <h3 id="employee_header">&nbsp;Showing <span id="rowsCount"></span> Employees</h3>
 
-<table id="employee-table">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Title</th>
-            <th>Extension</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody></tbody>
-</table>
+    <table id="employee-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Extension</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
 
     <script src="js/employee-management.js"></script>
 </body>

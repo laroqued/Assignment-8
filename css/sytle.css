@@ -104,6 +104,11 @@ tr:nth-child(even) {
     font-weight: bold;
     padding: 5px;
     margin: 5px;
-    
+
+
+}
+
+.error {
+    color: red;
 
 }

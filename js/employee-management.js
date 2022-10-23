@@ -1,3 +1,38 @@
+function validateForm() {
+  var name = document.forms["employee-form"]["name"];
+  if (name.value == "") {
+    document.getElementById("errorname").innerHTML =
+      "Please enter a valid name";
+    name.focus();
+    return false;
+  } else {
+    document.getElementById("errorname").innerHTML = "";
+  }
+  
+  var title = document.forms["employee-form"]["title"];
+    if (title.value == "") {
+      document.getElementById("errortitle").innerHTML =
+        "Please enter a valid title";
+      title.focus();
+      return false;
+    } else {
+      document.getElementById("errortitle").innerHTML = "";
+    }
+
+      var extension = document.forms["employee-form"]["extension"];
+      if (extension.value == "") {
+        document.getElementById("errorextension").innerHTML =
+          "Please enter a valid extension";
+        extension.focus();
+        return false;
+      } else {
+        document.getElementById("errorextension").innerHTML = "";
+      }
+
+
+
+}
+
 var $ = function (id) {
   "use strict";
   return document.getElementById(id);
@@ -97,10 +132,10 @@ function processEntries(e) {
     html = `$<div style="color:red">Name:</div><p style="color:red"> ${name} </p> <br>"`;
     html = `$ <div style="color:red">Title:</div><p style="color:red"> ${title} </p><br>`;
     html = `$<div style="color:red">Extension:</div><p style="color:red"> ${extension} </p><br>`;
-      result1 = document.querySelectorAll("tr").length - 1;
-      document.getElementById("rowsCount").innerHTML = result1;
-  }else{
-     tbodyEl.innerHTML += `
+    result1 = document.querySelectorAll("tr").length - 1;
+    document.getElementById("rowsCount").innerHTML = result1;
+  } else {
+    tbodyEl.innerHTML += `
             <tr>
                     <td>${name}</td>
                 <td>${title}</td>
@@ -109,7 +144,6 @@ function processEntries(e) {
             </tr>
         `;
   }
- 
 }
 
 function deleteRow(e) {
@@ -125,5 +159,6 @@ function deleteRow(e) {
   btn.closest("tr").remove();
 }
 
-formEl.addEventListener("submit", processEntries);
+formEl.addEventListener("submit", processEntries, validateForm);
+
 tableEl.addEventListener("click", deleteRow);
