@@ -27,12 +27,49 @@ h2 {
     width: 25%;
 }
 
+table {
+
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+}
+
+table,
+th,
+td {
+    border: none;
+    width: auto;
+    color: whitesmoke;
+    width: 50%;
+    text-align: left;
+    border: 1px solid black;
+}
+
+td {
+    text-align: left;
+    color: black;
+    font-weight: bold;
+}
+
+th {
+    text-align: left;
+    background-color: var(--button_blue);
+    font-weight: bold;
+}
+
+tr:nth-child(odd) {
+    background-color: lightblue;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(213, 225, 233);
+}
+
 #employee-form {
     display: flex;
     display: inline;
     width: auto;
-
-
 }
 
 #employee-form label {
@@ -41,12 +78,9 @@ h2 {
     margin-left: 0px;
     text-align: left;
     font-weight: bold;
-
-
 }
 
 #employee-form input {
-
     display: inline;
     margin-bottom: 1rem;
     border-color: var(--button_blue);
@@ -55,11 +89,21 @@ h2 {
 }
 
 #employee-form button {
-
     background-color: var(--button_blue);
     color: whitesmoke;
     font-weight: bold;
     padding: 5px 30px;
-    margin-left: 170px;
+    margin-left: 270px;
+
+
+}
+
+#row-delete {
+    background-color: var(--button_blue);
+    color: whitesmoke;
+    font-weight: bold;
+    padding: 5px;
+    margin: 5px;
+    
 
 }

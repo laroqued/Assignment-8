@@ -12,21 +12,38 @@
     <h1>The Employee Management Application</h1>
     <h3>Add Employee</h3>
 
-    <main id="employee-form">
-        <label for=""> Name:</label>
-        <input type="text" id="name_input"><br>
+<form id="employee-form">
+    <div class="input-row">
+    <label>Name:</label>
+    <input type="text" id="name_input" class="form-control" />
+    </div>
+    <div class="input-row">
+        <label>Title:</label>
+        <input type="text" id="title_input" class="form-control" />
+        
+    </div>
+    <div class="input-row">
+                <label>Extension</label>
+                <input type="text" id="extension_input" class="form-control" />
+    
+    </div>
+    <button id="add_row">Add</button>
+</form>
+    <h2 id="registration_header" style="color:red">&nbsp;</h2>
+    <d id="registration_info"></d>
+    <h3 id="employee_header" >&nbsp;Showing <span id="rowsCount"></span> Employees</h3>
 
-        <label for=""> Title:</label>
-        <input type="text" id="title_input"><br>
-
-        <label for="">Extension:</label>
-        <input type="text" id="extension_input"><br>
-
-        <label for=""></label>
-        <button id="add_row">Add</button><br>
-
-        <output id="futurevalue"></output>
-    </main>
+<table id="employee-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Title</th>
+            <th>Extension</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
 
     <script src="js/employee-management.js"></script>
 </body>
