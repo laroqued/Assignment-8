@@ -102,7 +102,7 @@ function processEntries(e) {
   var deleteButton = `<td><button id="row-delete" class="deleteBtn">Delete</button></td>`;
 
   required = "<span>Required field</span>";
-  msg = "Please review your entries and complete all required fields";
+  msg = "Make sure you fill out all of the required sections!";
   var required;
 
   var entry = [`${name}`, `${title}`, `${extension}`, `${deleteButton}`];
